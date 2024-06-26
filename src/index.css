@@ -39,7 +39,18 @@
 }
 
 .explore .textbox {
-  margin-left: calc((100vw - 1280px) / 2);
+  margin-left: calc((100vw - 1536px) / 2);
+}
+
+@media screen and (max-width: 1536px) {
+  .explore .textbox {
+    margin-left: calc((100vw - 1280px) / 2);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .explore .textbox {
+    margin-left: calc((100vw - 1024px) / 2);
+  }
 }
 
 .carousel .carousel__item .info .info__type .info__type--dash::before {
