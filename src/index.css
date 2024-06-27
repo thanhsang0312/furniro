@@ -38,25 +38,80 @@
   background-size: cover;
 }
 
-.explore .textbox {
+.carousel .textbox {
   margin-left: calc((100vw - 1536px) / 2);
 }
 
 @media screen and (max-width: 1536px) {
-  .explore .textbox {
+  .carousel .textbox {
     margin-left: calc((100vw - 1280px) / 2);
   }
 }
 @media screen and (max-width: 1280px) {
-  .explore .textbox {
+  .carousel .textbox {
     margin-left: calc((100vw - 1024px) / 2);
   }
 }
 
-.carousel .carousel__item .info .info__type .info__type--dash::before {
+.carousel .swiper__item .info .info__type .info__type--dash::before {
   content: "";
   display: block;
   width: 27px;
   height: 1px;
   background-color: #616161;
+}
+
+.carousel .swiper__item--content {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.carousel .swiper__item.active .swiper__item--content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel .swiper__item .swiper__item--thumbnail {
+  aspect-ratio: 372/486;
+  transition: aspect-ratio 0.3s;
+}
+
+.carousel .swiper__item.active .swiper__item--thumbnail {
+  aspect-ratio: 404/582;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b88e2f;
+}
+
+.swiper-pagination-bullet {
+  width: var(
+    --swiper-pagination-bullet-width,
+    var(--swiper-pagination-bullet-size, 8px)
+  );
+  height: var(
+    --swiper-pagination-bullet-height,
+    var(--swiper-pagination-bullet-size, 8px)
+  );
+  display: inline-block;
+  border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+  background: var(--swiper-pagination-bullet-inactive-color, #000);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: #b88e2f;
 }
