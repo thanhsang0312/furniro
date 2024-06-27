@@ -1,7 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import "swiper/modules/navigation.css";
 import bedroom from "../../assets/images/bedroom.jpg";
 import dining from "../../assets/images/dining.jpg";
 import explore1 from "../../assets/images/explore1.jpg";
