@@ -16,16 +16,24 @@ const Header = () => {
         </div>
         <ul className="header__nav flex absolute left-1/2 translate-x-[-50%] poppins-medium">
           <li className="capitalize px-[38px]">
-            <a href="#">home</a>
+            <a href="#" data-replace="home">
+              <span>home</span>
+            </a>
           </li>
           <li className="capitalize px-[38px]">
-            <a href="#">shop</a>
+            <a href="#" data-replace="shop">
+              <span>shop</span>
+            </a>
           </li>
           <li className="capitalize px-[38px]">
-            <a href="#">about</a>
+            <a href="#" data-replace="about">
+              <span>about</span>
+            </a>
           </li>
           <li className="capitalize px-[38px]">
-            <a href="#">contact</a>
+            <a href="#" data-replace="contact">
+              <span>contact</span>
+            </a>
           </li>
         </ul>
         <div className="header__cta flex ">

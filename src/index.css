@@ -115,3 +115,99 @@
   opacity: var(--swiper-pagination-bullet-opacity, 1);
   background: #b88e2f;
 }
+
+.header__nav li a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.header__nav li a::before,
+.header__nav li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.header__nav li a::before {
+  background-color: #b88e2f;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.header__nav li a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #b88e2f;
+}
+
+.header__nav li a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+.header__nav li a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+.header__nav li a span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.header__nav li a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+.btn-flip {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  display: inline-block;
+}
+.btn-flip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.btn-flip:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+.btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: #b88e2f;
+  display: block;
+  transition: 0.3s;
+  position: absolute;
+  background: #ffffff;
+  content: "buy now";
+  transform: translateY(-50%) rotateX(90deg);
+  border: 1px solid;
+}
+.btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #ffffff;
+  display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  transition: 0.3s;
+  position: relative;
+  background: #b88e2f;
+  content: "buy now";
+  transform: translateY(0) rotateX(0);
+}

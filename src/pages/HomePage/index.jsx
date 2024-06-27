@@ -29,8 +29,8 @@ const HomePage = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis.
               </p>
-              <button className="capitalize text-white bg-primary-cl poppins-bold px-[72px] h-[74px]">
-                buy now
+              <button className="btn-flip capitalize text-white bg-primary-cl poppins-bold ">
+                {/* buy now */}
               </button>
             </div>
           </div>
@@ -259,6 +259,18 @@ const HomePage = () => {
               )}
             </SwiperSlide>
           </Swiper>
+        </section>
+        <section className="share py-[67px]">
+          <div className="container mx-auto px-4">
+            <div className="textbox text-center">
+              <p className="poppins-semibold text-[20px] text-[#616161] leading-[24px]">
+                Share your setup with
+              </p>
+              <h3 className="poppins-bold text-[40px] text-[#3A3A3A]">
+                #FuniroFurniture
+              </h3>
+            </div>
+          </div>
         </section>
       </main>
       <Footer />
